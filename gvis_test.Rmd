@@ -1,0 +1,18 @@
+## GoogleVis on Github
+
+Let us first load the package and set the option `plot.gvis` to `chart` so that only the chart fragment is printed.
+
+```{r setup, cache = F, message = F}
+require(googleVis)
+options(gvis.plot.tag = 'chart')
+```
+
+Now it is time to generate a chart
+
+```{r chart, comment = NA, results = 'asis'}
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+plot(M1)
+```
+
+
+
